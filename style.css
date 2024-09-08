@@ -1,0 +1,194 @@
+/* importando fontes com o dropbox */
+
+@font-face {
+    font-family: mregular;
+    src: url(https://dl.dropbox.com/scl/fi/svch6mqrjpkzqzu09grxi/Millennium-Regular_0.ttf?rlkey=gvpyyivuz134twwh9gyt84mlr&raw=1);
+}
+
+@font-face {
+    font-family: mitalic;
+    src: url(https://dl.dropbox.com/scl/fi/ypmysfxm39g3qzuwi1h95/Millennium-Italic_0.ttf?rlkey=efiiwd6nzwmzl5w6uzrgn2oqm&raw=1);
+}
+
+@font-face {
+    font-family: mbold;
+    src: url(https://dl.dropbox.com/scl/fi/6q7t3i5qtmv80ml43of3r/Millennium-Bold.ttf?rlkey=a2ypct70351pbwfu5cy3sj8o1&raw=1);
+}
+
+/* estilizando o corpo da página */
+body {
+    font-family: "mregular";
+    background-image: url('imagens/background.jpg');
+    background-size: 100px;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* estilizando os títulos h1 */
+h1 {
+    font-family: 'mbold';
+    font-size: 3rem;
+    color: #724B41;
+    text-align: center;
+}
+
+/* estilizando as seções da página */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+/* estilizando os inputs dentro das seções */
+section input {
+    width: 40rem;
+    border: solid #724B41;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    color: #724B41;
+    font-size: 1rem;
+    font-family: 'mregular';
+    box-sizing: border-box;
+}
+
+/* estiliza os botões dentro das seções */
+section button {
+    padding: 1rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: #ec4f95;
+    color: #ffeef8;
+    font-family: 'mregular';
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* estilizando a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+    width: 60rem;
+    height: 43vh;
+    overflow-y: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.resultados-pesquisa::-webkit-scrollbar {
+    display: none;
+  }
+
+/* adicionando efeito hover ao botão de < pesquisa > */
+section button:hover {
+    transform: scale(1.05);
+}
+
+/* estilizando cada item de resultado */
+.item-resultado {
+    background: #ec4f95;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* estilizando os títulos dentro dos itens de resultado */
+.item-resultado h2 {
+    font-size: 1.5rem;
+    color: #ffeef8;
+}
+
+.item-resultado h3 {
+    font-family: 'mbold';
+    font-size: 1rem;
+    color: #ffeef8;
+}
+
+/* estilizando os links */
+a {
+    text-decoration: none;
+    color: #550078;
+}
+
+/* estilizando os links quando são passados o mouse sobre */
+a:hover {
+    font-family: 'mitalic';
+}
+
+/* estilizando a descrição meta dentro dos itens de resultado */
+.descricao-meta {
+    color: #ffffff;
+    margin: 0.5rem 0;
+}
+
+/* estilizando o rodapé da página */
+footer {
+    color: #724B41;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    font-size: 1rem;
+}
+
+/* responsividade para telas menores */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    section input {
+        width: 25rem;
+        padding: 0.8rem;
+    }
+
+    .resultados-pesquisa {
+        width: 40rem;
+        height: 40vh;
+    }
+
+    .item-resultado h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* responsividade para celulares */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.8rem;
+        letter-spacing: 0.1rem;
+    }
+
+    section input {
+        width: 17rem;
+    }
+
+    section button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .resultados-pesquisa {
+        width: 90%;
+        height: 50vh;
+    }
+
+    .item-resultado h2 {
+        font-size: 1.1rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
